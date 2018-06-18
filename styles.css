@@ -1,0 +1,57 @@
+body, html {
+    margin: 0;
+    height: 100%;
+}
+
+*, *:after, *,before {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+#starfield {
+    background: black;
+    height: 100%;
+    width: 100%;
+    position: block;
+    overflow: hidden;
+}
+
+h1 {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: lightgoldenrodyellow;
+    font-family: 'Spirax', cursive;
+    font-size: 60px;
+    text-shadow: 0px 0px 120px white, 0 0 10px blue;
+}
+
+.star {
+    width: 5px;
+    height: 5px;
+    border-radius: 100%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transition: all 1s linear;
+    filter: blur(1.5px);
+    animation: flicker 1s infinite, fadeIn 2s forwards, changeColor 3s forwards;
+}
+
+@keyframes flicker {
+    0%   { opacity:1; }
+    50%  { opacity:.4; }
+    100% { opacity:1; }
+}
+
+@keyframes fadeIn {
+    from {transform: scale(0)}
+    top {transform: scale(1)}
+}
+
+@keyframes changeColor {
+    from {background-color: lightgoldenrodyellow}
+    top {background-color: goldenrod}
+}
