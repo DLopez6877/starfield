@@ -13,7 +13,6 @@ body, html {
     background: black;
     height: 100%;
     width: 100%;
-    position: block;
     overflow: hidden;
 }
 
